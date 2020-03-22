@@ -8,6 +8,7 @@
 <% @tweets.each do |tweet| %>
   <tr>
     <td><%= tweet.content %></td>
+    <td><%= link_to 'Tweet詳細', tweet_path(tweet.id) %></td>
   </tr>
 <% end %>
 </table>
