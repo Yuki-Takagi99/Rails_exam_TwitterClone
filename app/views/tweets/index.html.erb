@@ -1,3 +1,14 @@
 <h1>Tweet一覧</h1>
 <!-- <p>Find me in app/views/tweets/index.html.erb</p> -->
-<p>あなたが投稿したTweetは以下です！</p>
+<p>あなたが投稿したつぶやきは以下です！</p>
+<table>
+  <tr>
+    <th>Tweet内容</th>
+  </tr>
+<% @tweets.each do |tweet| %>
+  <tr>
+    <td><%= tweet.content %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to '新しくTweetを投稿する', new_tweet_path %>
