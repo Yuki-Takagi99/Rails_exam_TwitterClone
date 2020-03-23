@@ -10,6 +10,32 @@
   </head>
 
   <body>
+    <header>
+    	<h1 class="headline">
+        <a>Sample App</a>
+      </h1>
+      <ul class="nav-list">
+        <li class="nav-list-item">
+          <a>ホーム</a>
+        </li>
+        <li class="nav-list-item">ツイート一覧</li>
+        <li class="nav-list-item">お気に入り</li>
+        <li class="nav-list-item">フォロー</li>
+        <li class="nav-list-item">フォロワー</li>
+      </ul>
+    </header>
+
     <%= yield %>
+
+    <footer>
+  　　<ul class="footer-menu">
+       <li>Home ｜</li>
+       <li>About ｜</li>
+       <li>Service ｜</li>
+       <li>Contact</li>
+      </ul>
+      <p>© All rights reserved by Yuki.T</p>
+    </footer>
+
   </body>
 </html>
