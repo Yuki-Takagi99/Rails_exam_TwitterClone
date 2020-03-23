@@ -8,10 +8,14 @@ class TweetsController < ApplicationController
   end
   def create
     @tweet = Tweet.new(tweet_params)
-    if @tweet.save
-      redirect_to tweets_path, notice: "Tweetを作成しました！"
-    else
+    if params[:back]
       render :new
+    else
+      if @tweet.save
+        redirect_to tweets_path, notice: "Tweetを作成しました！"
+      else
+        render :new
+      end
     end
   end
   def show
@@ -31,6 +35,10 @@ class TweetsController < ApplicationController
   def destroy
     @tweet.destroy
     redirect_to tweets_path, notice: "Tweetを削除しました！"
+  end
+  def confirm
+    @tweet = Tweet.new(tweet_params)
+    render :new if @tweet.invalid?
   end
   private
   def tweet_params
