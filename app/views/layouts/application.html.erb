@@ -4,11 +4,9 @@
     <title>Talk</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header>
     	<h1 class="headline">
@@ -24,9 +22,9 @@
         <li class="nav-list-item">フォロワー</li>
       </ul>
     </header>
-
-    <%= yield %>
-
+    <div class="content">
+      <%= yield %>
+    </div>
     <footer>
   　　<ul class="footer-menu">
        <li>Home ｜</li>
@@ -36,6 +34,5 @@
       </ul>
       <p>© All rights reserved by Yuki.T</p>
     </footer>
-
   </body>
 </html>
